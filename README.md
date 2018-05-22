@@ -1,3 +1,3 @@
-###Stock Search Web Application
+## Stock Search Web Application
 
 Built using AngularJS and Alphavantage API.
