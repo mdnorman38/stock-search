@@ -1,0 +1,78 @@
+/* Menu and Content Styling */
+
+body {
+    width: 100vw;
+}
+
+.navbar {
+    display: block;
+    /* background: #232436; */
+    background: #495159;
+    width: 100%;
+    border-right: 1px solid rgba(0,0,0,0.14);
+}
+
+.navbar h4 {
+    color: #0092BC;
+}
+
+.navbar-toggler {
+    float: right;
+}
+
+.navbar ul {
+    margin: 0 auto;
+}
+
+@media (min-width : 992px) {
+    .navbar {
+        width: 17rem;
+        height: 100vh;
+        float: left;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.content-row {
+    width: 100%;
+    margin: 0px;
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+/* Home page styling */
+
+.loading {
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 25px;
+}
+
+.extra-text {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.top-row {
+    margin-bottom: 2%;
+}
+
+.bottom-row {
+    margin-bottom: 2%;
+}
+
+.title-container {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 15%;
+}

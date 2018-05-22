@@ -1,0 +1,99 @@
+<h2>{{Name}}:
+    <small class="text-muted">{{Symbol}}</small>
+</h2>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link show active" data-toggle="tab" href="javascript:void(0)" ng-click="getData('TIME_SERIES_DAILY')">
+            Daily
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="javascript:void(0)" ng-click="getData('TIME_SERIES_WEEKLY')">
+            Weekly
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="javascript:void(0)" ng-click="getData('TIME_SERIES_MONTHLY')">
+            Monthly
+        </a>
+    </li>
+</ul>
+<div google-chart chart="myChartObject" style="height:100%; width:100%; margin-bottom:5%;">
+    <div class="loading" ng-show="loading">
+        <p>Making magic happen...</p>
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+</div> 
+
+<div class="row top-row">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Open</h6>
+                <p class="extra-text lead">{{open | number: 1}} USD</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Close</h6>
+                <p class="extra-text lead">{{close | number: 1}} USD</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">High</h6>
+                <p class="extra-text lead">{{high | number: 1}} USD</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Low</h6>
+                <p class="extra-text lead">{{low | number: 1}} USD</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row bottom-row">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Volume</h6>
+                <p class="extra-text lead">{{volume}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Time Zone</h6>
+                <p class="extra-text lead">{{timeZone}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Last Refreshed</h6>
+                <p class="extra-text lead">{{lastRefreshed}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Trading</h6>
+                <p class="extra-text lead">{{trading() ? "Open" : "Closed"}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
